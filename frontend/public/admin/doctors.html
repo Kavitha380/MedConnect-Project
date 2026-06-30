@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors - MedConnect Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <h2>MedConnect</h2>
+            <p>Admin Panel</p>
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">🏠 Dashboard</a>
+            </li>
+             <li>
+                <a href="appoinments.html">📅 Appointments</a>
+            </li>
+
+            <li class="active">
+                <a href="doctors.html">👨‍⚕️ Doctors</a>
+            </li>
+
+           
+
+            <li>
+                <a href="hospitals.html">🏥 Hospitals</a>
+            </li>
+
+            <li>
+                <a href="login.html">🚪 Logout</a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+
+            <div>
+                <h1>Doctors Management</h1>
+                <p>Manage all registered doctors</p>
+            </div>
+
+            <div class="admin-profile">
+                👤 Admin
+            </div>
+
+        </header>
+
+        <!-- Top Controls -->
+        <div class="content-box">
+
+            <div class="page-header">
+
+                <h2>Available Doctors</h2>
+
+                <a href="doctor-form.html" class="primary-btn">
+                    + Add Doctor
+                </a>
+
+            </div>
+
+            <div class="search-row">
+
+                <input
+                    type="text"
+                    placeholder="Search Doctor Name">
+
+                <input
+                    type="text"
+                    placeholder="Search Specialization">
+
+                <button class="primary-btn">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Doctors Table -->
+
+        <div class="content-box">
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Doctor</th>
+                            <th>Specialization</th>
+                            <th>Hospital</th>
+                            <th>Experience</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Status</th>
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>DOC001</td>
+                            <td>Doctor Name</td>
+                            <td>Cardiology</td>
+                            <td>Hospital Name</td>
+                            <td>10 Years</td>
+                            <td>doctor@email.com</td>
+                            <td>9876543210</td>
+
+                            <td>
+                                <span class="status confirmed">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <a href="doctor-form.html" class="edit-btn">
+                                    Edit
+                                </a>
+
+                                <button class="delete-btn">
+                                    Remove
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>DOC002</td>
+                            <td>Doctor Name</td>
+                            <td>Neurology</td>
+                            <td>Hospital Name</td>
+                            <td>8 Years</td>
+                            <td>doctor@email.com</td>
+                            <td>9876543210</td>
+
+                            <td>
+                                <span class="status pending">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <a href="doctor-form.html" class="edit-btn">
+                                    Edit
+                                </a>
+
+                                <button class="delete-btn">
+                                    Remove
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>DOC003</td>
+                            <td>Doctor Name</td>
+                            <td>Dermatology</td>
+                            <td>Hospital Name</td>
+                            <td>5 Years</td>
+                            <td>doctor@email.com</td>
+                            <td>9876543210</td>
+
+                            <td>
+                                <span class="status completed">
+                                    Active
+                                </span>
+                            </td>
+
+                            <td>
+
+                                <a href="doctor-form.html" class="edit-btn">
+                                    Edit
+                                </a>
+
+                                <button class="delete-btn">
+                                    Remove
+                                </button>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>

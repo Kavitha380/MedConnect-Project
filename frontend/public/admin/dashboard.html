@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedConnect - Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>MedConnect</h2>
+            <p>Admin Panel</p>
+        </div>
+
+        <ul class="menu">
+            <li class="active">
+                <a href="dashboard.html">🏠 Dashboard</a>
+            </li>
+
+            <li>
+                <a href="appoinments.html">📅 Appointments</a>
+            </li>
+
+            <li>
+                <a href="doctors.html">👨‍⚕️ Doctors</a>
+            </li>
+
+            <li>
+                <a href="hospitals.html">🏥 Hospitals</a>
+            </li>
+
+            <li>
+                <a href="login.html">🚪 Logout</a>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="topbar">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p>Welcome to MedConnect Administration</p>
+            </div>
+
+            <div class="admin-profile">
+                <span>👤 Admin</span>
+            </div>
+        </header>
+
+        <!-- Overview Cards -->
+        <section class="cards">
+
+            <div class="card">
+                <h3>Total Appointments</h3>
+                <h2>120</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Doctors</h3>
+                <h2>25</h2>
+            </div>
+
+            <div class="card">
+                <h3>Total Hospitals</h3>
+                <h2>10</h2>
+            </div>
+
+            <div class="card">
+                <h3>Pending Appointments</h3>
+                <h2>15</h2>
+            </div>
+
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>Quick Actions</h2>
+            </div><br>
+
+            <div class="quick-actions">
+
+                <a href="doctors.html" class="action-btn">
+                    ➕ Add Doctor
+                </a>
+ 
+                <a href="hospitals.html" class="action-btn">
+                    🏥 Add Hospital
+                </a>
+
+                <a href="appointments.html" class="action-btn">
+                    📅 View Appointments
+                </a>
+
+            </div>
+<br>
+        </section>
+
+        <!-- Recent Appointments -->
+        <section class="section">
+
+            <div class="section-header">
+                <h2>Recent Appointments</h2>
+            </div>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Hospital</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Patient Name</td>
+                            <td>Doctor Name</td>
+                            <td>Hospital Name</td>
+                            <td>DD/MM/YYYY</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Patient Name</td>
+                            <td>Doctor Name</td>
+                            <td>Hospital Name</td>
+                            <td>DD/MM/YYYY</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Patient Name</td>
+                            <td>Doctor Name</td>
+                            <td>Hospital Name</td>
+                            <td>DD/MM/YYYY</td>
+                            <td><span class="status completed">Completed</span></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
