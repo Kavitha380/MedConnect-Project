@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment View</title>
+  <link rel="stylesheet" href="doctor.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Appointment Details</h2>
+
+  <div id="details"></div>
+
+  <h3>Medical Notes</h3>
+
+  <input id="symptoms" placeholder="Symptoms">
+  <input id="diagnosis" placeholder="Diagnosis">
+  <textarea id="prescription" placeholder="Prescription"></textarea>
+
+  <button onclick="approve()">Approve</button>
+  <button onclick="reject()">Reject</button>
+
+</div>
+
+<script>
+let id = localStorage.getItem("currentId");
+let data = JSON.parse(localStorage.getItem("appointments")) || [];
+
+let app = data.find(a => a.id == id);
+
+document.getElementById("details").innerHTML = `
+  <p>Patient: ${app.patientName}</p>
+  <p>Date: ${app.date}</p>
+  <p>Time: ${app.time}</p>
+  <p>Status: ${app.status}</p>
+`;
+
+function approve() {
+  app.status = "Approved";
+
+  app.symptoms = document.getElementById("symptoms").value;
+  app.diagnosis = document.getElementById("diagnosis").value;
+  app.prescription = document.getElementById("prescription").value;
+
+  save();
+}
+
+function reject() {
+  let reason = prompt("Reason for rejection:");
+  app.status = "Rejected";
+  app.reason = reason;
+
+  save();
+}
+
+function save() {
+  localStorage.setItem("appointments", JSON.stringify(data));
+  alert("Updated");
+}
+</script>
+
+</body>
+</html>
